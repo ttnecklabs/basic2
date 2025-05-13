@@ -1,12 +1,8 @@
 import streamlit as st
-from modules.load_data import load_weather_data
 
-st.set_page_config(page_title="제주/남도 기후 대시보드", layout="wide")
-st.title("📊 제주/남도 기후 대시보드")
+st.set_page_config(page_title="기상 대시보드", layout="wide")
 
-st.sidebar.success("왼쪽 메뉴에서 페이지를 선택하세요")
-
-# 데이터 로딩
-df = load_weather_data()
-
-st.write("👈 왼쪽 메뉴에서 상세 항목을 선택해보세요.")
+st.title("🌤 기상 데이터 통합 대시보드")
+st.markdown("""
+- 좌측 메뉴에서 [기후 변화], [일조/일사], [이상기후 경고판], [감귤 적합도 지도]를 선택해 주세요.
+""")
