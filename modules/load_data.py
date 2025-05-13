@@ -1,5 +1,6 @@
 import pandas as pd
 import sqlite3
+import streamlit as st
 
 @st.cache_data
 def load_weather_data():
