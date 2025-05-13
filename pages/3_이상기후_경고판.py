@@ -17,8 +17,8 @@ df_weather['연속무강수'] = (df_weather[humid_col] == 0).astype(int).rolling
 # 고온경고 (30도 이상)
 df_weather['고온경고'] = df_weather['평균기온(°C)'] >= 30
 
-# 강풍경고 (14m/s 이상)
-df_weather['강풍경고'] = df_weather[wind_col] >= 14
+# 강풍경고 (5m/s 이상)
+df_weather['강풍경고'] = df_weather[wind_col] >= 5
 
 # 경고 데이터 필터링
 alerts_df = df_weather[(df_weather['연속무강수'] >= 5) | (df_weather['고온경고']) | (df_weather['강풍경고'])]
