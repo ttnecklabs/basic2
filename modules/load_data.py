@@ -1,5 +1,6 @@
 import pandas as pd
 import sqlite3
+import streamlit as st  # 🔥 이 부분 추가!!
 
 @st.cache_data
 def load_data():
